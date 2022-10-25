@@ -13,6 +13,7 @@ MODULE_VERSION("0.1");
 // MSR ids from SDM
 #define IA32_VMX_ENTRY_CTLS		0x484
 #define IA32_VMX_EXIT_CTLS		0x483
+#define IA32_VMX_PINBASED_CTLS          0x481
 
 // bit_info
 //
@@ -61,6 +62,15 @@ struct bit_info vmentry[12] =
 
 };
 
+// VM Pinbased info
+struct bit_info pinbased[5] =
+{
+	{ 0, "External Interrupt Exiting" },
+	{ 3, "NMI Exiting" },
+	{ 5, "Virtual NMIs" },
+	{ 6, "Activate VMX Preemption Timer" },
+	{ 7, "Process Posted Interrupts" }
+};
 
 // probe_bit_info
 //
@@ -91,6 +101,10 @@ void probe_vmx_features(void)
 	printk(KERN_INFO "VMX Exit Controls MSR: 0x%llx\n", (uint64_t)(lo | (uint64_t)hi << 32));
 	probe_bit_info(vmexit, 14, lo, hi);
 
+	/* pinbased controls */
+	rdmsr(IA32_VMX_PINBASED_CTLS, lo, hi);
+	printk(KERN_INFO "VMX Pinbased Controls MSR: 0x%llx\n", (uint64_t)(lo | (uint64_t)hi << 32));
+	probe_bit_info(pinbased, 5, lo, hi);
 }
 
 // Module Entry point
