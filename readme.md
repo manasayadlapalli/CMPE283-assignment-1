@@ -1,7 +1,7 @@
 
 # CMPE 283 Assignment-1:
 ## Team Members:
-1. Shubadha Paithankar(SJSU ID: 016013283), 
+1. Shubadha Paithankar(SJSU ID: 016013283)
 2. Sai Manasa Yadlapalli (SJSU ID: 015999659)
 
 ## Development Environment:
@@ -33,7 +33,6 @@ IA32_VMX_ENTRY_CTLS  <br>
 IA32_VMX_PROCBASED_CTLS3 
 
 Added the kernel module IA32_VMX_EXIT_CTLS to determine how it should set the reserved bits. Also, after that, I added IA32_VMX_ENTRY_CTLS MSR (index 484H) reports on the allowed settings of most of the VM-entry control. At the end, I modified the script with  IA32_VMX_PROCBASED_CTLS3 module to determine which bits may be set to 1. Failure to clear reserved bits causes subsequent VM entries to fail in the script.
-
 
 ## 2. Steps Contribution:
 1) Download the VMware Workstation in your OS. 
