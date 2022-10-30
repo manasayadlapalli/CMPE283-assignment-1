@@ -15,24 +15,22 @@
   2. Installed kernel headers with: 
   ``` sudo apt-get install build-essential linux-headers-`uname -r` ```
   
-MSR- A model-specific register (MSR) is any of various control registers in the x86 instruction set used for debugging, program execution tracing, computer performance monitoring, and toggling certain CPU features.
-
 ## Questions:
 Individual Contribution:
 
-Sai Manasa Yadlapalli:
-I worked on the first three MSR’s
-IA32_VMX_PINBASED_CTLS
-IA32_VMX_PROCBASED_CTLS
-IA32_VMX_PROCBASED_CTLS2
+### Sai Manasa Yadlapalli:
+I worked on the first three MSR’s <br>
+IA32_VMX_PINBASED_CTLS <br>
+IA32_VMX_PROCBASED_CTLS <br>
+IA32_VMX_PROCBASED_CTLS2 <br>
 
 Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls
 
-Shubhada Paithankar:
-I worked on the remaining three MSR’s
-IA32_VMX_EXIT_CTLS 
-IA32_VMX_ENTRY_CTLS 
-IA32_VMX_PROCBASED_CTLS3
+### Shubhada Paithankar:
+I worked on the remaining three MSR’s <br>
+IA32_VMX_EXIT_CTLS  <br>
+IA32_VMX_ENTRY_CTLS  <br>
+IA32_VMX_PROCBASED_CTLS3 
 
 ## Steps Contribution:
 1) Download the VMware Workstation in your OS. 
@@ -59,7 +57,7 @@ IA32_VMX_PROCBASED_CTLS3
 
 <img width="628" alt="Screen Shot 2022-10-25 at 3 56 08 PM" src="https://user-images.githubusercontent.com/99461999/197897398-8098d199-1986-46dd-8321-dd00ac5a7c6e.png">
 
-<img width="627" alt="Screen Shot 2022-10-25 at 3 57 26 PM" src="https://user-images.githubusercontent.com/99461999/197897505-e05de32c-3515-403a-8b24-00fa2ae91893.png">
+<img width="628" alt="Screen Shot 2022-10-25 at 3 57 26 PM" src="https://user-images.githubusercontent.com/99461999/197897505-e05de32c-3515-403a-8b24-00fa2ae91893.png">
 
 ### References: 
 1. https://www.youtube.com/watch?v=4tgluSJDA_E
