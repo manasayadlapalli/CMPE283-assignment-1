@@ -15,8 +15,8 @@
   2. Installed kernel headers with: 
   ``` sudo apt-get install build-essential linux-headers-`uname -r` ```
   
-## Questions:
-Individual Contribution:
+# Questions:
+## 1. Individual Contribution:
 
 ### Sai Manasa Yadlapalli:
 I worked on the first three MSR’s <br>
@@ -24,7 +24,7 @@ IA32_VMX_PINBASED_CTLS <br>
 IA32_VMX_PROCBASED_CTLS <br>
 IA32_VMX_PROCBASED_CTLS2 <br>
 
-Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls
+Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls <br>
 
 ### Shubhada Paithankar:
 I worked on the remaining three MSR’s <br>
@@ -32,7 +32,7 @@ IA32_VMX_EXIT_CTLS  <br>
 IA32_VMX_ENTRY_CTLS  <br>
 IA32_VMX_PROCBASED_CTLS3 
 
-## Steps Contribution:
+## 2. Steps Contribution:
 1) Download the VMware Workstation in your OS. 
 2) After the installation, Click on ‘Create a new VM’
 3) Download the Ubuntu OS Iso image for VMware Workstation
@@ -45,7 +45,7 @@ IA32_VMX_PROCBASED_CTLS3
 9) Install git using command line ``` sudo apt install git ```
 10) To clone our working code, 
     ``` git clone https://github.com/manasayadlapalli/CMPE283-assignment-1 ```
-11) cd CMPE-assignment-1, Run the Makefile with the command ``` make all ```
+11) ``` cd CMPE-assignment-1```, Run the Makefile with the command ``` make all ```
 12) After running the Makefile, vmx_probe_mod.ko file is generated.
 13) Run the command ```sudo insmod vmx_probe_mod.ko``` to insert the module into the kernel.
 14) To see the output, run ```sudo dmesg```, output screenshots are attached below.
@@ -53,13 +53,13 @@ IA32_VMX_PROCBASED_CTLS3
       ```sudo rmmod vmx_probe_mod.ko ```
 
 
-## Assignment Output Steps:
+## Assignment-1 output snippets:
 
 <img width="628" alt="Screen Shot 2022-10-25 at 3 56 08 PM" src="https://user-images.githubusercontent.com/99461999/197897398-8098d199-1986-46dd-8321-dd00ac5a7c6e.png">
 
 <img width="628" alt="Screen Shot 2022-10-25 at 3 57 26 PM" src="https://user-images.githubusercontent.com/99461999/197897505-e05de32c-3515-403a-8b24-00fa2ae91893.png">
 
-### References: 
+## References: 
 1. https://www.youtube.com/watch?v=4tgluSJDA_E
 2. http://retis.sssup.it/luca/KernelProgramming/Slides/modules_intro.pdf
 
