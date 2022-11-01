@@ -19,18 +19,18 @@
 ## 1. Individual Contribution:
 
 ### Sai Manasa Yadlapalli:
-I worked on the first three MSR’s <br>
-IA32_VMX_PINBASED_CTLS <br>
-IA32_VMX_PROCBASED_CTLS <br>
-IA32_VMX_PROCBASED_CTLS2 <br>
-
-Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls <br>
-
-### Shubhada Paithankar:
-I worked on the remaining three MSR’s <br>
+I worked on the below three MSR’s <br>
 IA32_VMX_EXIT_CTLS  <br>
 IA32_VMX_ENTRY_CTLS  <br>
 IA32_VMX_PROCBASED_CTLS3 
+
+Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls. Implemented the Entry / Exit / Procbased / Secondary Procbased / Tertiary Procbased / Pinbased controls <br>
+
+### Shubhada Paithankar:
+I worked on the remaining three MSR’s <br>
+IA32_VMX_PINBASED_CTLS <br>
+IA32_VMX_PROCBASED_CTLS <br>
+IA32_VMX_PROCBASED_CTLS2 <br>
 
 Added the kernel module IA32_VMX_EXIT_CTLS to determine how it should set the reserved bits. Also, after that, I added IA32_VMX_ENTRY_CTLS MSR (index 484H) reports on the allowed settings of most of the VM-entry control. At the end, I modified the script with  IA32_VMX_PROCBASED_CTLS3 module to determine which bits may be set to 1. Failure to clear reserved bits causes subsequent VM entries to fail in the script.
 
