@@ -32,7 +32,10 @@ IA32_VMX_PINBASED_CTLS <br>
 IA32_VMX_PROCBASED_CTLS <br>
 IA32_VMX_PROCBASED_CTLS2 <br>
 
-Added the kernel module IA32_VMX_EXIT_CTLS to determine how it should set the reserved bits. Also, after that, I added IA32_VMX_ENTRY_CTLS MSR (index 484H) reports on the allowed settings of most of the VM-entry control. At the end, I modified the script with  IA32_VMX_PROCBASED_CTLS3 module to determine which bits may be set to 1. Failure to clear reserved bits causes subsequent VM entries to fail in the script.
+Using aboove MSR modules we implemented the pinbased controls,rocbased controls and secondary procbased controls.
+
+We added the the Kernal module IA32_VMX_PINBASED_CTLS to Use this MSR for pinbased controls if no true controls capability.After that we used The IA32_VMX_PINBASED_CTLS reports on the allowed settings of most of the pin-based. we used this MSR for procbased controls if no true.
+At the end of script I used IA32_VMX_PROCBASED_CTLS2 to use this MSR for secondary procbased 
 
 ## 2. Steps Contribution:
 1) Download the VMware Workstation in your OS. 
