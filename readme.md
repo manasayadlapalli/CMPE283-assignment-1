@@ -24,7 +24,7 @@ IA32_VMX_EXIT_CTLS  <br>
 IA32_VMX_ENTRY_CTLS  <br>
 IA32_VMX_PROCBASED_CTLS3 
 
-Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls. Implemented the Entry / Exit / Procbased / Secondary Procbased / Tertiary Procbased / Pinbased controls <br>
+Firstly, I tested out the ‘hello world’ code on kernel module and then modified it to probe VM Entry, VM Exists. Next, I added the functionality to probe VM pin based controls. Implemented the Entry / Exit / Procbased controls. <br>
 
 ### Shubhada Paithankar:
 I worked on the remaining three MSR’s <br>
