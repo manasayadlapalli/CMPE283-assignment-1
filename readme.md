@@ -32,10 +32,9 @@ IA32_VMX_PINBASED_CTLS <br>
 IA32_VMX_PROCBASED_CTLS <br>
 IA32_VMX_PROCBASED_CTLS2 <br>
 
-Using aboove MSR modules we implemented the pinbased controls,rocbased controls and secondary procbased controls.
+Using above MSR modules we implemented the pinbased controls, Procbased controls and secondary procbased controls.
 
-We added the the Kernal module IA32_VMX_PINBASED_CTLS to Use this MSR for pinbased controls if no true controls capability.After that we used The IA32_VMX_PINBASED_CTLS reports on the allowed settings of most of the pin-based. we used this MSR for procbased controls if no true.
-At the end of script I used IA32_VMX_PROCBASED_CTLS2 to use this MSR for secondary procbased 
+We added the Kernal module IA32_VMX_PINBASED_CTLS to Use this MSR for pinbased controls if no true controls capability. After that, we used The IA32_VMX_PINBASED_CTLS reports on the allowed settings of most of the pin-based. we used this MSR for procbased controls if no true. At the end of script I used IA32_VMX_PROCBASED_CTLS2 to use this MSR for secondary procbased 
 
 ## 2. Steps Contribution:
 1) Download the VMware Workstation in your OS. 
